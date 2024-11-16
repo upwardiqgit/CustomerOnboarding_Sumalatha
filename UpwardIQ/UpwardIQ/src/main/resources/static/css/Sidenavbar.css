@@ -1,0 +1,26 @@
+.side-navbar {
+            min-width: 250px;
+            height: 500px;
+background-color: #91a7c89c;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .main-content{
+    background-color: #e9ebee9c;
+		}
+        .side-navbar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            display: block;
+        }
+        .side-navbar a:hover {
+            background-color: #007bff;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #e9ecef;
+        }
