@@ -9,7 +9,7 @@ public class UpwardIqApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UpwardIqApplication.class, args);
 		
-		System.out.println("Hello Customer");
+		System.out.println("Hello customer!!");
 	}
 
 }
