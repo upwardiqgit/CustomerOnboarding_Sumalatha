@@ -2,9 +2,9 @@
 .navbar-logo {
     background-image: url('/images/upwardlogo.jpg'); 
     background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 150px;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 150px; 
     width: 100%; 
 }
 
