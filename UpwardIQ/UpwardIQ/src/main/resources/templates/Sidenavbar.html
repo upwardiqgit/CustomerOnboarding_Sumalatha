@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Side Nav Bar</title>
+    <title>Side Navbar</title>
     <link rel="stylesheet" href="Sidenavbar.css" th:href="@{/css/Sidenavbar.css}"/>
 </head>
 <body>
 <header th:fragment="Sidenav">
    <div class="d-flex bg-grey">
-        <!-- Side Navbar -->
-        <div class="side-navbar">
+        
+        <div class="side-navbar" style="text-align: center;">
            
 			    
-			    <a href="/save" th:href="@{/save}">Save Customer</a>  <!-- Navigates to the save customer page -->
-			     <a href="/#" th:href="@{/search}">Search Customers</a> <!-- Navigates to the search customers page -->
+			    <a href="/save" th:href="@{/save}">Save Customer</a>  
+			     <a href="/search" th:href="@{/search}">Search Customers</a> 
 			
         </div>
 
        
     </div>
 
-    <!-- Bootstrap JS Bundle -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </header>
 </body>
