@@ -34,7 +34,7 @@
                     <div class="form-group">
                         <label for="customerId">Customer ID</label>
                         <input type="text" class="form-control" id="customerId" name="customerId" required placeholder="Enter Customer ID">
-                        <div id="customerIdMessage" class="mt-2 text-danger" style="display:none;"></div>
+                        <div id="customerIdMessage" class="mt-2" style="display:none;"></div>
                     </div>
                     
                     
@@ -91,6 +91,7 @@
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="terms" required>
                         <label class="form-check-label" for="terms">I agree to the terms & conditions</label>
+                        
                     </div>
                 
                  
@@ -103,15 +104,14 @@
         </div>               
     </div>
 
-    <!-- Footer -->
+
     <footer class="bg-light txt-white text-center py-3 mt-4">
         <p>This is UpwardIQ footer</p>
     </footer>
     
-    // Ajax
+
     
     <script>
-        // Reset Functionality
         function resetForm() {
             var form = document.getElementById('customerForm');
             form.reset();
@@ -120,12 +120,12 @@
             messageDiv.style.display = 'none';
         }
 
-        // Customer ID Uniqueness Check using AJAX
+
         document.getElementById('customerId').addEventListener('blur', function() {
             var customerId = this.value;
             var messageDiv = document.getElementById('customerIdMessage');
 
-            // Clear previous error message
+
             messageDiv.style.display = 'none';
 
             if (customerId) {
@@ -133,12 +133,15 @@
                     .then(response => response.json())
                     .then(data => {
                         if (data.exists) {
-                            // If Customer ID exists, show the error message in red
+
                             messageDiv.textContent = 'Customer ID already exists.';
+                            messageDiv.style.color = 'red';
                             messageDiv.style.display = 'block';
                         } else {
-                            // If Customer ID does not exist, hide the error message
-                            messageDiv.textContent = 'Customer ID already exists.';
+
+                            messageDiv.textContent = 'ID is available to create.';
+                            messageDiv.style.color = 'green';
+                            messageDiv.style.display = 'block';
 
                             messageDiv.style.display = 'none';
                         }
@@ -151,7 +154,7 @@
         document.getElementById('customerForm').addEventListener('submit', function(event) {
             var form = event.target;
 
-            // Prevent form submission if fields are invalid
+
             if (!form.checkValidity() || document.getElementById('customerIdMessage').style.display === 'block') {
                 event.preventDefault();
                 form.classList.add('was-validated');
