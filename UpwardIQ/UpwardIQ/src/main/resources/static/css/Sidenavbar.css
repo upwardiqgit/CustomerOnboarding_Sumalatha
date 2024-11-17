@@ -15,8 +15,8 @@ background-color: #91a7c89c;
             display: block;
         }
         .side-navbar a:hover {
-            background-color: #007bff;
-            color: #fff;
+            background-color: blue;
+            color: white;
             transition: all 0.3s ease;
         }
         .content {
