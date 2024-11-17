@@ -90,7 +90,7 @@
                  
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="terms" required>
-                        <label class="form-check-label" for="terms">I agree to the terms & conditions</label>
+                        <label class="form-check-label" for="terms">I agree the terms & conditions</label>
                          <div class="invalid-feedback">Please agree the terms and conditions.</div>
                     </div>
                 
@@ -104,7 +104,7 @@
         </div>               
     </div>
 
-    <!-- Footer -->
+    
     <footer class="bg-light txt-white text-center py-3 mt-4">
         <p>This is UpwardIQ footer</p>
     </footer>
@@ -112,7 +112,7 @@
     
     
     <script>
-        // Reset Functionality
+
         function resetForm() {
             var form = document.getElementById('customerForm');
             form.reset();
@@ -121,12 +121,12 @@
             messageDiv.style.display = 'none';
         }
 
-        // Customer ID Uniqueness Check using AJAX
+
         document.getElementById('customerId').addEventListener('blur', function() {
             var customerId = this.value;
             var messageDiv = document.getElementById('customerIdMessage');
 
-            // Clear previous error message
+
             messageDiv.style.display = 'none';
 
             if (customerId) {
@@ -134,11 +134,11 @@
                     .then(response => response.json())
                     .then(data => {
                         if (data.exists) {
-                            // If Customer ID exists, show the error message in red
+
                             messageDiv.textContent = 'Customer ID already exists.';
                             messageDiv.style.display = 'block';
                         } else {
-                            // If Customer ID does not exist, hide the error message
+
                             messageDiv.textContent = 'Customer ID already exists.';
 
                             messageDiv.style.display = 'none';
@@ -148,11 +148,11 @@
             }
         });
 
-        // Form Validation Before Submit
+
         document.getElementById('customerForm').addEventListener('submit', function(event) {
             var form = event.target;
 
-            // Prevent form submission if fields are invalid
+
             if (!form.checkValidity() || document.getElementById('customerIdMessage').style.display === 'block') {
                 event.preventDefault();
                 form.classList.add('was-validated');
